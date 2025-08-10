@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SwissChat Assistant</title>
+  <meta name="description" content="SwissChat Assistant – WhatsApp-basierter Sprach‑ und Chat‑Assistent. Schreibe einfach 'Hallo' und starte den Chat sofort." />
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #0f172a; --muted:#475569; --brand:#e11d48; --brand2:#ef4444; --card:#f8fafc;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--fg); background:var(--bg); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 24px; }
+    header { display:flex; align-items:center; gap:16px; padding:16px 0; }
+    .logo { width:56px; height:56px; border-radius:14px; background:var(--brand); display:grid; place-items:center; color:#fff; font-weight:800; }
+    .logo svg { width:28px; height:28px; fill:#fff; }
+    h1 { font-size: clamp(28px, 4vw, 40px); margin: 4px 0 8px; }
+    .sub { color:var(--muted); font-size: clamp(15px, 2vw, 18px); }
+    .card { background:var(--card); border:1px solid #e5e7eb; border-radius:16px; padding:24px; margin:24px 0; }
+    .cta { display:flex; flex-wrap:wrap; gap:12px; margin-top:18px; }
+    .btn { appearance:none; border:none; border-radius:12px; padding:12px 16px; font-weight:600; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:10px; }
+    .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand2)); color:#fff; }
+    .btn.ghost { background:#fff; color:var(--fg); border:1px solid #e5e7eb; }
+    .grid { display:grid; grid-template-columns: 1fr; gap:16px; }
+    @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
+    footer { color:var(--muted); font-size:14px; padding:24px 0; }
+    code { background:#f1f5f9; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo" aria-label="SwissChat">
+        <!-- chat bubble + waveform -->
+        <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20 2H4a2 2 0 0 0-2 2v14l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2ZM9 7a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V8a1 1 0 0 1 1-1Zm3-2a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V6a1 1 0 0 1 1-1Zm3 3a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V9a1 1 0 0 1 1-1Z"/></svg>
+      </div>
+      <div>
+        <h1>SwissChat Assistant</h1>
+        <p class="sub">WhatsApp‑basierter Sprach‑ & Chat‑Assistent. <strong>Schreibe einfach „Hallo“ und starte den Chat sofort.</strong></p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2 style="margin-top:0">Loslegen</h2>
+      <p>
+        Tippe auf <em>WhatsApp öffnen</em> und sende <code>Hallo</code>. Funktioniert auf Smartphone & Desktop (mit WhatsApp Desktop/Web).
+      </p>
+      <div class="cta">
+        <!-- TODO: Ersetze die Nummer durch deine produktive Nummer. Für Tests kannst du eine Sandbox- oder beliebige Nummer setzen. -->
+        <a class="btn primary" href="https://wa.me/410794067078?text=Hallo" target="_blank" rel="noopener">WhatsApp öffnen</a>
+        <a class="btn ghost" href="https://twitter.com/swisschat_ai" target="_blank" rel="noopener">X / Twitter</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3 style="margin-top:0">Kurz & knapp</h3>
+        <ul>
+          <li>Sprache → Text (Sprachnachrichten werden transkribiert)</li>
+          <li>Antwort in natürlicher Sprache</li>
+          <li>Keine dauerhafte Speicherung von Inhalten</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Multilingual</h3>
+        <p style="margin:8px 0">DE: Schreibe einfach „Hallo“ und starte den Chat sofort.</p>
+        <p style="margin:8px 0">EN: Just type “Hello” and start chatting right away.</p>
+        <p style="margin:8px 0">FR: Écrivez simplement « Bonjour » et commencez à discuter immédiatement.</p>
+        <p style="margin:8px 0">IT: Scrivi semplicemente “Ciao” e inizia subito a chattare.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3 style="margin-top:0">Datenschutz</h3>
+      <p>Nachrichten werden nur zur Beantwortung verarbeitet und nicht dauerhaft gespeichert. Der Transport über WhatsApp erfolgt über Infrastruktur von Meta. Für produktive Nutzung empfehlen wir Server‑Hosting in CH/EU.</p>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> SwissChat Assistant · Kontakt: <a href="mailto:joel.barandun@icloud.com">joel.barandun@icloud.com</a></div>
+      <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+    </footer>
+  </div>
+</body>
+</html>
