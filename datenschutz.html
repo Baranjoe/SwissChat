@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datenschutzerklärung - SwissChat Assistant</title>
+  <meta name="description" content="Datenschutzerklärung für SwissChat Assistant - Transparenz über Datenverarbeitung" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      --fg: #ffffff;
+      --muted: #fecaca;
+      --brand: #dc2626;
+      --brand-light: #ef4444;
+      --card: rgba(255, 255, 255, 0.1);
+      --card-border: rgba(255, 255, 255, 0.2);
+      --shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.3);
+    }
+    
+    * { 
+      box-sizing: border-box; 
+      margin: 0;
+      padding: 0;
+    }
+    
+    html, body { 
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+    
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 2rem 1.5rem;
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      color: var(--fg);
+      text-decoration: none;
+      font-weight: 500;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-1px);
+    }
+    
+    .back-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+    
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.9);
+      display: grid;
+      place-items: center;
+      margin-left: auto;
+    }
+    
+    .logo svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .content {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+    
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--fg), var(--muted));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    h2::before {
+      content: counter(section);
+      counter-increment: section;
+      background: linear-gradient(135deg, var(--brand), var(--brand-light));
+      color: white;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    
+    .content {
+      counter-reset: section;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+      color: var(--fg);
+      opacity: 0.95;
+    }
+    
+    ul {
+      margin: 1rem 0 1rem 1.5rem;
+      color: var(--fg);
+      opacity: 0.95;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+      padding-left: 0.5rem;
+    }
+    
+    strong {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    
+    .contact-info {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      opacity: 0.8;
+    }
+    
+    .highlight {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid var(--muted);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="index.html" class="back-btn">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 12H5m7-7l-7 7 7 7"/>
+        </svg>
+        Zurück zur Startseite
+      </a>
+      
+      <div class="logo" aria-label="SwissChat">
+        <svg viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <path d="M20 15 C20 10, 25 5, 35 5 L65 5 C75 5, 80 10, 80 15 L80 45 C80 50, 75 55, 65 55 L40 55 L25 65 L25 55 C20 55, 15 50, 15 45 Z" fill="#dc2626"/>
+          <rect x="30" y="35" width="4" height="8" rx="2" fill="white"/>
+          <rect x="38" y="25" width="4" height="28" rx="2" fill="white"/>
+          <rect x="46" y="20" width="4" height="38" rx="2" fill="white"/>
+          <rect x="54" y="25" width="4" height="28" rx="2" fill="white"/>
+          <rect x="62" y="35" width="4" height="8" rx="2" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>Datenschutzerklärung</h1>
+      
+      <div class="highlight">
+        <p>Diese Datenschutzerklärung informiert Sie darüber, wie <strong>SwissChat Assistant</strong> Ihre personenbezogenen Daten verarbeitet, wenn Sie unseren WhatsApp-basierten KI-Assistenten nutzen.</p>
+      </div>
+
+      <h2>Verantwortliche Stelle</h2>
+      <div class="contact-info">
+        <p><strong>SwissChat Assistant</strong><br>
+        Joel Barandun<br>
+        E-Mail: <strong>swisschat@icloud.com</strong></p>
+      </div>
+
+      <h2>Erhebung und Verwendung von Daten</h2>
+      <p>Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung unserer KI-Assistenten-Dienste erforderlich ist. Dazu gehören:</p>
+      <ul>
+        <li><strong>Nachrichteninhalte:</strong> Text- und Sprachnachrichten, die Sie über WhatsApp senden</li>
+        <li><strong>WhatsApp-Telefonnummer:</strong> Zur Identifikation und Kommunikation</li>
+        <li><strong>Sprachdaten:</strong> Zur Transkription von Dialekt und anderen Sprachen</li>
+        <li><strong>Technische Daten:</strong> Datum und Uhrzeit der Anfragen für Service-Optimierung</li>
+      </ul>
+
+      <h2>Besondere Verarbeitung von Sprachdaten</h2>
+      <p>Unser Hauptfeature ist die Transkription von Sprachnachrichten, einschließlich Schweizerdeutsch und anderen Dialekten. Diese Audio-Daten werden ausschließlich zur Texterstellung verarbeitet und <strong>nicht dauerhaft gespeichert</strong>.</p>
+
+      <h2>Weitergabe von Daten</h2>
+      <p>Ihre Daten werden in der <strong>Schweiz gehostet</strong> und verarbeitet. Wir geben keine personenbezogenen Daten an Dritte weiter, außer:</p>
+      <ul>
+        <li>WhatsApp/Meta für die Nachrichtenübertragung (technisch erforderlich)</li>
+        <li>Bei gesetzlichen Verpflichtungen</li>
+      </ul>
+
+      <h2>Speicherung und Sicherheit</h2>
+      <p>Wir legen größten Wert auf Datenschutz:</p>
+      <ul>
+        <li><strong>Keine dauerhafte Speicherung:</strong> Nachrichten werden nur zur Bearbeitung temporär verarbeitet</li>
+        <li><strong>Schweizer Hosting:</strong> Alle Daten werden auf Servern in der Schweiz verarbeitet</li>
+        <li><strong>Verschlüsselung:</strong> Sichere Datenübertragung und -verarbeitung</li>
+        <li><strong>Automatische Löschung:</strong> Temporäre Daten werden nach der Bearbeitung gelöscht</li>
+      </ul>
+
+      <h2>Rechte der Nutzer</h2>
+      <p>Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
+      <ul>
+        <li>Recht auf Auskunft über verarbeitete Daten</li>
+        <li>Recht auf Berichtigung unrichtiger Daten</li>
+        <li>Recht auf Löschung Ihrer Daten</li>
+        <li>Recht auf Einschränkung der Verarbeitung</li>
+        <li>Recht auf Datenübertragbarkeit</li>
+      </ul>
+      <p>Kontaktieren Sie uns unter <strong>swisschat@icloud.com</strong> für alle datenschutzrelevanten Anfragen.</p>
+
+      <h2>Änderungen dieser Erklärung</h2>
+      <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren. Die aktuelle Version ist stets unter dieser Adresse verfügbar.</p>
+
+      <div class="highlight">
+        <p><strong>Stand:</strong> August 2024</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>© <span id="year"></span> SwissChat Assistant - Sicher, transparent, schweizerisch</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
