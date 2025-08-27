@@ -1,91 +1,173 @@
 <!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Allgemeine Geschäftsbedingungen – SwissChat Assistant</title>
+  <meta name="description" content="AGB für SwissChat Assistant: Nutzung, Credits, Haftung und mehr." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      --fg: #ffffff;
+      --muted: #fecaca;
+      --brand: #dc2626;
+      --brand-light: #ef4444;
+      --card: rgba(255, 255, 255, 0.1);
+      --card-border: rgba(255, 255, 255, 0.2);
+      --shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.3);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: var(--fg); background: var(--bg); min-height: 100vh; line-height: 1.7; }
+    a { color: #fff; text-underline-offset: 2px; }
+    .container { max-width: 880px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    .header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    .back-btn { display: inline-flex; align-items: center; gap: .5rem; background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: .75rem 1rem; color: var(--fg); text-decoration: none; font-weight: 500; backdrop-filter: blur(10px); transition: all .3s ease; }
+    .back-btn:hover { background: rgba(255,255,255,.15); transform: translateY(-1px); }
+    .back-btn svg { width: 16px; height: 16px; fill: currentColor; }
+    .logo { width: 48px; height: 48px; border-radius: 12px; background: rgba(255,255,255,.9); display: grid; place-items: center; margin-left: auto; }
+    .logo svg { width: 24px; height: 24px; }
+    .content { background: var(--card); border: 1px solid var(--card-border); border-radius: 20px; padding: 2.25rem; backdrop-filter: blur(10px); box-shadow: var(--shadow); }
+    h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, var(--fg), var(--muted)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    h2 { font-size: 1.35rem; font-weight: 700; margin: 1.75rem 0 0.75rem; color: var(--muted); display: flex; align-items: center; gap: .75rem; }
+    h2 .num { background: linear-gradient(135deg, var(--brand), var(--brand-light)); color: white; width: 2rem; height: 2rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .9rem; font-weight: 800; }
+    p { margin-bottom: .9rem; color: var(--fg); opacity: .97; }
+    ul { margin: .75rem 0 .75rem 1.25rem; }
+    li { margin-bottom: .5rem; }
+    strong { color: var(--muted); font-weight: 700; }
+    .block { background: rgba(255,255,255,.06); border: 1px solid var(--card-border); border-radius: 12px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .grid { display: grid; gap: .9rem; grid-template-columns: 1fr; }
+    @media (min-width: 740px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .kachel { background: rgba(255,255,255,.05); border: 1px solid var(--card-border); border-radius: 12px; padding: 1rem; }
+    .badge { display: inline-block; background: rgba(255,255,255,.12); border: 1px solid var(--card-border); padding: .25rem .5rem; border-radius: 8px; font-size: .8rem; }
+    .footer { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 1.5rem; opacity: .85; }
+    .highlight { background: rgba(255,255,255,.05); border-left: 4px solid var(--muted); border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1rem 0 1.25rem; }
+    details { background: rgba(255,255,255,.05); border: 1px solid var(--card-border); border-radius: 12px; padding: .9rem 1rem; margin: .8rem 0; }
+    summary { cursor: pointer; font-weight: 600; color: var(--muted); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="sr-only">Zum Inhalt springen</a>
+  <div class="container">
+    <header class="header" role="banner">
+      <a href="index.html" class="back-btn" aria-label="Zurück zur Startseite">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
+        Zurück
+      </a>
+      <div class="logo" aria-label="SwissChat">
+        <svg viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <path d="M20 15 C20 10, 25 5, 35 5 L65 5 C75 5, 80 10, 80 15 L80 45 C80 50, 75 55, 65 55 L40 55 L25 65 L25 55 C20 55, 15 50, 15 45 Z" fill="#dc2626"/>
+          <rect x="30" y="35" width="4" height="8" rx="2" fill="white"/>
+          <rect x="38" y="25" width="4" height="28" rx="2" fill="white"/>
+          <rect x="46" y="20" width="4" height="38" rx="2" fill="white"/>
+          <rect x="54" y="25" width="4" height="28" rx="2" fill="white"/>
+          <rect x="62" y="35" width="4" height="8" rx="2" fill="white"/>
+        </svg>
+      </div>
+    </header>
 
+    <main id="main" class="content" role="main" aria-labelledby="title">
+      <h1 id="title">Allgemeine Geschäftsbedingungen</h1>
 
-<section aria-labelledby="vertrag">
-<h2 id="vertrag">5. Vertragsabschluss, Laufzeit & Kündigung</h2>
-<ul>
-<li>Der Vertrag kommt mit Abschluss der Zahlung bzw. Bestätigung im Checkout zustande.</li>
-<li>Bei Abonnements läuft der Vertrag auf unbestimmte Zeit mit der gewählten Abrechnungsperiode und kann jederzeit mit Wirkung zum Ende der aktuellen Periode gekündigt werden.</li>
-<li>Einmalprodukte enden mit vollständiger Leistungserbringung.</li>
-</ul>
-</section>
+      <section aria-labelledby="geltung">
+        <h2 id="geltung"><span class="num" aria-hidden="true">1</span> Geltungsbereich</h2>
+        <p>Diese AGB regeln die Nutzung von SwissChat Assistant. Anbieter ist Joël Barandun, Rappenmööslistrasse 20, 8840 Einsiedeln, Schweiz.</p>
+      </section>
 
+      <section aria-labelledby="nutzung">
+        <h2 id="nutzung"><span class="num" aria-hidden="true">2</span> Nutzung des Dienstes</h2>
+        <p>SwissChat ist ein WhatsApp-KI-Assistent. Voraussetzung ist ein gültiges WhatsApp-Konto. Missbräuchliche oder rechtswidrige Nutzung ist untersagt.</p>
+      </section>
 
-<section aria-labelledby="widerruf">
-<h2 id="widerruf">6. Rückerstattungen & Widerruf</h2>
-<ul>
-<li>Für digitale Leistungen besteht in der Schweiz kein generelles gesetzliches Widerrufsrecht. Eine Rückerstattung bereits erbrachter/angefangener Leistungsperioden ist ausgeschlossen.</li>
-<li><strong>Fehl- oder Doppelabbuchungen</strong> werden nach Prüfung vollständig erstattet.</li>
-<li>Bei <strong>anhalten den, vollständigen Dienstausfällen (&gt; 24 h)</strong> gewähren wir eine anteilige Gutschrift auf die nächste Periode.</li>
-<li>Gesetzlich zwingende Rechte bleiben unberührt.</li>
-</ul>
-</section>
+      <section aria-labelledby="credits">
+        <h2 id="credits"><span class="num" aria-hidden="true">3</span> Credits & Bezahlung</h2>
+        <p>Die Nutzung erfolgt über ein Credit-System. Guthaben kann aufgeladen werden und wird bei Anfragen je nach Token- bzw. Sprachnachrichtenverbrauch abgezogen.</p>
+      </section>
 
+      <section aria-labelledby="limits">
+        <h2 id="limits"><span class="num" aria-hidden="true">4</span> Blockierungen & Limits</h2>
+        <p>Zur Missbrauchsvermeidung können Anfragen limitiert oder Konten vorübergehend gesperrt werden.</p>
+      </section>
 
-<section aria-labelledby="verfuegbarkeit">
-<h2 id="verfuegbarkeit">7. Verfügbarkeit & Support</h2>
-<p>Wir betreiben SwissChat mit angemessener Sorgfalt und streben hohe Verfügbarkeit an. Wartungen oder Drittstörungen (z. B. WhatsApp, Hosting) können zu Unterbrechungen führen. Support per E‑Mail: <a href="mailto:swisschat@icloud.com">swisschat@icloud.com</a>.</p>
-</section>
+      <section aria-labelledby="vertrag">
+        <h2 id="vertrag"><span class="num" aria-hidden="true">5</span> Vertragsabschluss, Laufzeit & Kündigung</h2>
+        <ul>
+          <li>Der Vertrag kommt mit Abschluss der Zahlung bzw. Bestätigung im Checkout zustande.</li>
+          <li>Bei Abonnements läuft der Vertrag auf unbestimmte Zeit mit der gewählten Abrechnungsperiode und kann jederzeit mit Wirkung zum Ende der aktuellen Periode gekündigt werden.</li>
+          <li>Einmalprodukte enden mit vollständiger Leistungserbringung.</li>
+        </ul>
+      </section>
 
+      <section aria-labelledby="widerruf">
+        <h2 id="widerruf"><span class="num" aria-hidden="true">6</span> Rückerstattungen & Widerruf</h2>
+        <ul>
+          <li>Für digitale Leistungen besteht in der Schweiz kein generelles gesetzliches Widerrufsrecht. Eine Rückerstattung bereits erbrachter/angefangener Leistungsperioden ist ausgeschlossen.</li>
+          <li><strong>Fehl- oder Doppelabbuchungen</strong> werden nach Prüfung vollständig erstattet.</li>
+          <li>Bei <strong>anhaltenden, vollständigen Dienstausfällen (&gt; 24 h)</strong> gewähren wir eine anteilige Gutschrift auf die nächste Periode.</li>
+          <li>Gesetzlich zwingende Rechte bleiben unberührt.</li>
+        </ul>
+      </section>
 
-<section aria-labelledby="pflichten">
-<h2 id="pflichten">8. Pflichten der Nutzer:innen</h2>
-<ul>
-<li>Keine rechtswidrigen Inhalte einspeisen, keine Rechte Dritter verletzen.</li>
-<li>Keine automatisierten Massenanfragen/Spam.</li>
-<li>Geeignete Sicherungen eigener Daten vorhalten (z. B. lokale Kopien wichtiger Inhalte).</li>
-</ul>
-</section>
+      <section aria-labelledby="verfuegbarkeit">
+        <h2 id="verfuegbarkeit"><span class="num" aria-hidden="true">7</span> Verfügbarkeit & Support</h2>
+        <p>Wir betreiben SwissChat mit angemessener Sorgfalt und streben hohe Verfügbarkeit an. Wartungen oder Drittstörungen (z. B. WhatsApp, Hosting) können zu Unterbrechungen führen. Support per E‑Mail: <a href="mailto:swisschat@icloud.com">swisschat@icloud.com</a>.</p>
+      </section>
 
+      <section aria-labelledby="pflichten">
+        <h2 id="pflichten"><span class="num" aria-hidden="true">8</span> Pflichten der Nutzer:innen</h2>
+        <ul>
+          <li>Keine rechtswidrigen Inhalte einspeisen, keine Rechte Dritter verletzen.</li>
+          <li>Keine automatisierten Massenanfragen/Spam.</li>
+          <li>Geeignete Sicherungen eigener Daten vorhalten (z. B. lokale Kopien wichtiger Inhalte).</li>
+        </ul>
+      </section>
 
-<section aria-labelledby="datenschutz">
-<h2 id="datenschutz">9. Datenschutz</h2>
-<p>Informationen zur Datenverarbeitung findest du in unserer <a href="datenschutz.html">Datenschutzerklärung</a>. Diese ist Bestandteil dieser AGB.</p>
-</section>
+      <section aria-labelledby="datenschutz">
+        <h2 id="datenschutz"><span class="num" aria-hidden="true">9</span> Datenschutz</h2>
+        <p>Informationen zur Datenverarbeitung findest du in unserer <a href="datenschutz.html">Datenschutzerklärung</a>. Diese ist Bestandteil dieser AGB.</p>
+      </section>
 
+      <section aria-labelledby="ip">
+        <h2 id="ip"><span class="num" aria-hidden="true">10</span> Geistiges Eigentum</h2>
+        <p>Alle Rechte an Marken, Designs, Texten, Logos, Quellcode und sonstigen Inhalten von SwissChat verbleiben bei uns oder den jeweiligen Rechteinhabern. Eine Nutzung über den vereinbarten Zweck hinaus ist untersagt.</p>
+      </section>
 
-<section aria-labelledby="ip">
-<h2 id="ip">10. Geistiges Eigentum</h2>
-<p>Alle Rechte an Marken, Designs, Texten, Logos, Quellcode und sonstigen Inhalten von SwissChat verbleiben bei uns oder den jeweiligen Rechteinhabern. Eine Nutzung über den vereinbarten Zweck hinaus ist untersagt.</p>
-</section>
+      <section aria-labelledby="aenderungen">
+        <h2 id="aenderungen"><span class="num" aria-hidden="true">11</span> Änderungen der Leistungen/AGB</h2>
+        <p>Wir können Leistungen weiterentwickeln und AGB anpassen. Über wesentliche Änderungen informieren wir in geeigneter Form. Die fortgesetzte Nutzung gilt als Zustimmung; bei Widerspruch kannst du zum Periodenende kündigen.</p>
+      </section>
 
+      <section aria-labelledby="haftung">
+        <h2 id="haftung"><span class="num" aria-hidden="true">12</span> Haftung</h2>
+        <p>Für leichte Fahrlässigkeit haften wir nur für Verletzungen wesentlicher Vertragspflichten (Kardinalpflichten) und begrenzt auf den vertragstypisch vorhersehbaren Schaden. Zwingende Haftung (z. B. für grobe Fahrlässigkeit, Vorsatz, Personenschäden) bleibt unberührt.</p>
+      </section>
 
-<section aria-labelledby="aenderungen">
-<h2 id="aenderungen">11. Änderungen der Leistungen/AGB</h2>
-<p>Wir können Leistungen weiterentwickeln und AGB anpassen. Über wesentliche Änderungen informieren wir in geeigneter Form. Die fortgesetzte Nutzung gilt als Zustimmung; bei Widerspruch kannst du zum Periodenende kündigen.</p>
-</section>
+      <section aria-labelledby="schluss">
+        <h2 id="schluss"><span class="num" aria-hidden="true">13</span> Schlussbestimmungen</h2>
+        <ul>
+          <li>Es gilt Schweizer Recht. Gerichtsstand ist – soweit zulässig – Einsiedeln, Schweiz.</li>
+          <li>Sollte eine Bestimmung unwirksam sein, bleibt der Restvertrag wirksam (Salvatorische Klausel).</li>
+          <li>Rechte und Pflichten aus dem Vertrag dürfen ohne unsere Zustimmung nicht abgetreten werden.</li>
+        </ul>
+        <div class="block"><strong>Stand:</strong> August 2025</div>
+      </section>
 
+      <section aria-labelledby="kontakt">
+        <h2 id="kontakt"><span class="num" aria-hidden="true">14</span> Kontakt</h2>
+        <p>Joël Barandun · Rappenmööslistrasse 20, 8840 Einsiedeln, Schweiz · E‑Mail: <a href="mailto:swisschat@icloud.com">swisschat@icloud.com</a></p>
+      </section>
+    </main>
 
-<section aria-labelledby="haftung">
-<h2 id="haftung">12. Haftung</h2>
-<p>Für leichte Fahrlässigkeit haften wir nur für Verletzungen wesentlicher Vertragspflichten (Kardinalpflichten) und begrenzt auf den vertragstypisch vorhersehbaren Schaden. Zwingende Haftung (z. B. für grobe Fahrlässigkeit, Vorsatz, Personenschäden) bleibt unberührt.</p>
-</section>
-
-
-<section aria-labelledby="schluss">
-<h2 id="schluss">13. Schlussbestimmungen</h2>
-<ul>
-<li>Es gilt Schweizer Recht. Gerichtsstand ist – soweit zulässig – Einsiedeln, Schweiz.</li>
-<li>Sollte eine Bestimmung unwirksam sein, bleibt der Restvertrag wirksam (Salvatorische Klausel).</li>
-<li>Rechte und Pflichten aus dem Vertrag dürfen ohne unsere Zustimmung nicht abgetreten werden.</li>
-</ul>
-<div class="block"><strong>Stand:</strong> August 2025</div>
-</section>
-
-
-<section aria-labelledby="kontakt">
-<h2 id="kontakt">14. Kontakt</h2>
-<p>Joël Barandun · Rappenmööslistrasse 20, 8840 Einsiedeln, Schweiz · E‑Mail: <a href="mailto:swisschat@icloud.com">swisschat@icloud.com</a></p>
-</section>
-</main>
-
-
-<footer class="footer" role="contentinfo">
-<p>© <span id="year"></span> SwissChat Assistant</p>
-<p><a href="impressum.html">Impressum</a> • <a href="datenschutz.html">Datenschutz</a></p>
-</footer>
-</div>
-<script data-goatcounter="https://swisschat.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <footer class="footer" role="contentinfo">
+      <p>© <span id="year"></span> SwissChat Assistant</p>
+      <p><a href="impressum.html">Impressum</a> • <a href="datenschutz.html">Datenschutz</a></p>
+    </footer>
+  </div>
+  <script data-goatcounter="https://swisschat.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

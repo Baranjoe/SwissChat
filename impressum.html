@@ -1,76 +1,114 @@
 <!DOCTYPE html>
-<header class="header" role="banner">
-<a href="index.html" class="back-btn" aria-label="Zurück zur Startseite">
-<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
-Zurück
-</a>
-<div class="logo" aria-label="SwissChat">
-<svg viewBox="0 0 100 100" role="img" aria-hidden="true">
-<path d="M20 15 C20 10, 25 5, 35 5 L65 5 C75 5, 80 10, 80 15 L80 45 C80 50, 75 55, 65 55 L40 55 L25 65 L25 55 C20 55, 15 50, 15 45 Z" fill="#dc2626"/>
-<rect x="30" y="35" width="4" height="8" rx="2" fill="white"/>
-<rect x="38" y="25" width="4" height="28" rx="2" fill="white"/>
-<rect x="46" y="20" width="4" height="38" rx="2" fill="white"/>
-<rect x="54" y="25" width="4" height="28" rx="2" fill="white"/>
-<rect x="62" y="35" width="4" height="8" rx="2" fill="white"/>
-</svg>
-</div>
-</header>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum – SwissChat Assistant</title>
+  <meta name="description" content="Impressum von SwissChat Assistant." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      --fg: #ffffff;
+      --muted: #fecaca;
+      --brand: #dc2626;
+      --brand-light: #ef4444;
+      --card: rgba(255, 255, 255, 0.1);
+      --card-border: rgba(255, 255, 255, 0.2);
+      --shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.3);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: var(--fg); background: var(--bg); min-height: 100vh; line-height: 1.7; }
+    a { color: #fff; text-underline-offset: 2px; }
+    .container { max-width: 880px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    .header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    .back-btn { display: inline-flex; align-items: center; gap: .5rem; background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: .75rem 1rem; color: var(--fg); text-decoration: none; font-weight: 500; backdrop-filter: blur(10px); transition: all .3s ease; }
+    .back-btn:hover { background: rgba(255,255,255,.15); transform: translateY(-1px); }
+    .back-btn svg { width: 16px; height: 16px; fill: currentColor; }
+    .logo { width: 48px; height: 48px; border-radius: 12px; background: rgba(255,255,255,.9); display: grid; place-items: center; margin-left: auto; }
+    .logo svg { width: 24px; height: 24px; }
+    .content { background: var(--card); border: 1px solid var(--card-border); border-radius: 20px; padding: 2.25rem; backdrop-filter: blur(10px); box-shadow: var(--shadow); }
+    h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, var(--fg), var(--muted)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    h2 { font-size: 1.35rem; font-weight: 700; margin: 1.75rem 0 0.75rem; color: var(--muted); display: flex; align-items: center; gap: .75rem; }
+    h2 .num { background: linear-gradient(135deg, var(--brand), var(--brand-light)); color: white; width: 2rem; height: 2rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .9rem; font-weight: 800; }
+    p { margin-bottom: .9rem; color: var(--fg); opacity: .97; }
+    ul { margin: .75rem 0 .75rem 1.25rem; }
+    li { margin-bottom: .5rem; }
+    strong { color: var(--muted); font-weight: 700; }
+    .block { background: rgba(255,255,255,.06); border: 1px solid var(--card-border); border-radius: 12px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .footer { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 1.5rem; opacity: .85; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="sr-only">Zum Inhalt springen</a>
+  <div class="container">
+    <header class="header" role="banner">
+      <a href="index.html" class="back-btn" aria-label="Zurück zur Startseite">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
+        Zurück
+      </a>
+      <div class="logo" aria-label="SwissChat">
+        <svg viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <path d="M20 15 C20 10, 25 5, 35 5 L65 5 C75 5, 80 10, 80 15 L80 45 C80 50, 75 55, 65 55 L40 55 L25 65 L25 55 C20 55, 15 50, 15 45 Z" fill="#dc2626"/>
+          <rect x="30" y="35" width="4" height="8" rx="2" fill="white"/>
+          <rect x="38" y="25" width="4" height="28" rx="2" fill="white"/>
+          <rect x="46" y="20" width="4" height="38" rx="2" fill="white"/>
+          <rect x="54" y="25" width="4" height="28" rx="2" fill="white"/>
+          <rect x="62" y="35" width="4" height="8" rx="2" fill="white"/>
+        </svg>
+      </div>
+    </header>
 
+    <main id="main" class="content" role="main" aria-labelledby="title">
+      <h1 id="title">Impressum</h1>
 
-<main id="main" class="content" role="main" aria-labelledby="title">
-<h1 id="title">Impressum</h1>
+      <section aria-labelledby="anbieter">
+        <h2 id="anbieter"><span class="num" aria-hidden="true">1</span> Anbieterkennzeichnung</h2>
+        <div class="block" itemscope itemtype="https://schema.org/Organization">
+          <p><strong itemprop="name">SwissChat Assistant</strong><br>
+          betrieben von <span itemprop="founder">Joël Barandun</span></p>
+          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <p><span itemprop="streetAddress">Rappenmööslistrasse 20</span><br>
+            <span itemprop="postalCode">8840</span> <span itemprop="addressLocality">Einsiedeln</span><br>
+            <span itemprop="addressCountry">Schweiz</span></p>
+          </div>
+          <p>E‑Mail: <a href="mailto:swisschat@icloud.com" itemprop="email">swisschat@icloud.com</a><br>
+          Telefon/WhatsApp: <a href="tel:+41794067078" itemprop="telephone">+41 79 406 70 78</a></p>
+        </div>
+      </section>
 
+      <section aria-labelledby="haftung">
+        <h2 id="haftung"><span class="num" aria-hidden="true">2</span> Haftungsausschluss</h2>
+        <p>SwissChat Assistant erstellt Antworten automatisiert (KI). Wir bemühen uns um korrekte Informationen, können jedoch keine Gewähr für Vollständigkeit, Aktualität und Richtigkeit übernehmen. Eigene Entscheidungen solltest du stets eigenverantwortlich prüfen.</p>
+      </section>
 
-<section aria-labelledby="anbieter">
-<h2 id="anbieter">Anbieterkennzeichnung</h2>
-<div class="block" itemscope itemtype="https://schema.org/Organization">
-<p><strong itemprop="name">SwissChat Assistant</strong><br>
-betrieben von <span itemprop="founder">Joël Barandun</span></p>
-<div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-<p><span itemprop="streetAddress">Rappenmööslistrasse 20</span><br>
-<span itemprop="postalCode">8840</span> <span itemprop="addressLocality">Einsiedeln</span><br>
-<span itemprop="addressCountry">Schweiz</span></p>
-</div>
-<p>E‑Mail: <a href="mailto:swisschat@icloud.com" itemprop="email">swisschat@icloud.com</a><br>
-Telefon/WhatsApp: <a href="tel:+41794067078" itemprop="telephone">+41 79 406 70 78</a></p>
-<!-- Optional: MWST/UID angeben, falls vorhanden. Beispiel:
-<p>UID/MWST-Nr.: CHE-123.456.789 MWST</p> -->
-</div>
-</section>
+      <section aria-labelledby="links">
+        <h2 id="links"><span class="num" aria-hidden="true">3</span> Verweise und Links</h2>
+        <p>Externe Links werden sorgfältig geprüft. Für Inhalte verlinkter Seiten sind jedoch ausschließlich deren Betreiber verantwortlich; wir haben darauf keinen Einfluss.</p>
+      </section>
 
+      <section aria-labelledby="urheberrecht">
+        <h2 id="urheberrecht"><span class="num" aria-hidden="true">4</span> Urheberrecht</h2>
+        <p>Inhalt, Design und Logos dieser Website sind urheberrechtlich geschützt. Eine Nutzung über den privaten Gebrauch hinaus bedarf unserer vorherigen Zustimmung.</p>
+      </section>
 
-<section aria-labelledby="haftung">
-<h2 id="haftung">Haftungsausschluss</h2>
-<p>SwissChat Assistant erstellt Antworten automatisiert (KI). Wir bemühen uns um korrekte Informationen, können jedoch keine Gewähr für Vollständigkeit, Aktualität und Richtigkeit übernehmen. Eigene Entscheidungen solltest du stets eigenverantwortlich prüfen.</p>
-</section>
+      <section aria-labelledby="recht">
+        <h2 id="recht"><span class="num" aria-hidden="true">5</span> Anwendbares Recht & Gerichtsstand</h2>
+        <p>Es gilt Schweizer Recht. Ausschließlicher Gerichtsstand ist – soweit nicht zwingendes Recht entgegensteht – Einsiedeln, Schweiz.</p>
+        <div class="block"><strong>Stand:</strong> August 2025</div>
+      </section>
+    </main>
 
-
-<section aria-labelledby="links">
-<h2 id="links">Verweise und Links</h2>
-<p>Externe Links werden sorgfältig geprüft. Für Inhalte verlinkter Seiten sind jedoch ausschließlich deren Betreiber verantwortlich; wir haben darauf keinen Einfluss.</p>
-</section>
-
-
-<section aria-labelledby="urheberrecht">
-<h2 id="urheberrecht">Urheberrecht</h2>
-<p>Inhalt, Design und Logos dieser Website sind urheberrechtlich geschützt. Eine Nutzung über den privaten Gebrauch hinaus bedarf unserer vorherigen Zustimmung.</p>
-</section>
-
-
-<section aria-labelledby="recht">
-<h2 id="recht">Anwendbares Recht & Gerichtsstand</h2>
-<p>Es gilt Schweizer Recht. Ausschließlicher Gerichtsstand ist – soweit nicht zwingendes Recht entgegensteht – Einsiedeln, Schweiz.</p>
-<div class="block"><strong>Stand:</strong> August 2025</div>
-</section>
-</main>
-
-
-<footer class="footer" role="contentinfo">
-<p>© <span id="year"></span> SwissChat Assistant</p>
-<p><a href="datenschutz.html">Datenschutz</a> • <a href="agb.html">AGB</a></p>
-</footer>
-</div>
-<script data-goatcounter="https://swisschat.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <footer class="footer" role="contentinfo">
+      <p>© <span id="year"></span> SwissChat Assistant</p>
+      <p><a href="datenschutz.html">Datenschutz</a> • <a href="agb.html">AGB</a></p>
+    </footer>
+  </div>
+  <script data-goatcounter="https://swisschat.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

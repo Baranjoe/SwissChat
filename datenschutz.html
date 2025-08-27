@@ -130,15 +130,65 @@
           </ul>
         </details>
 
-        <details>
-          <summary><strong>Technische/Log-Daten</strong></summary>
-          <ul>
-            <li><strong>Zweck:</strong> Stabilität, Missbrauchsschutz und Fehleranalyse.</li>
-            <li><strong>Inhalt:</strong> Zeitstempel, anonymisierte IDs; <em>keine Nachrichteninhalte</em>; Telefonnummern werden <em>maskiert</em>.</li>
-            <li><strong>Speicherdauer:</strong> nur so lange nötig für Betrieb/Fehleranalyse, dann Löschung.</li>
-          </ul>
-        </details>
-      </section>
+          <details>
+            <summary><strong>Technische/Log-Daten</strong></summary>
+            <ul>
+              <li><strong>Zweck:</strong> Stabilität, Missbrauchsschutz und Fehleranalyse.</li>
+              <li><strong>Inhalt:</strong> Zeitstempel, anonymisierte IDs; <em>keine Nachrichteninhalte</em>; Telefonnummern werden <em>maskiert</em>.</li>
+              <li><strong>Speicherdauer:</strong> nur so lange nötig für Betrieb/Fehleranalyse, dann Löschung.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Nutzungsstatistiken & Credits</strong></summary>
+            <ul>
+              <li><strong>Zweck:</strong> Abrechnung, Monitoring und personalisierte Funktionen.</li>
+              <li><strong>Inhalt:</strong> Token‑ und Zeitverbrauch, verbleibendes Guthaben, Blockierungsstatus.</li>
+              <li><strong>Speicherdauer:</strong> keine automatische Löschung.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Chat-Verlauf</strong></summary>
+            <ul>
+              <li><strong>Zweck:</strong> Die letzten Nachrichten für besseren Kontext.</li>
+              <li><strong>Speicherdauer:</strong> ca. 10 Nachrichten bzw. 10 Minuten (TTL = 600 s).</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Rate-Limiting-Daten</strong></summary>
+            <ul>
+              <li><strong>Zweck:</strong> Schutz vor Missbrauch.</li>
+              <li><strong>Speicherdauer:</strong> automatische Löschung nach Ablauf des jeweiligen Zeitfensters (z. B. 60 s).</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Logs & Statistikdateien</strong></summary>
+            <ul>
+              <li><strong>Zweck:</strong> Betrieb, Fehleranalyse und Nutzungs­auswertung.</li>
+              <li><strong>Speicherdauer:</strong> Logs ca. 14 Tage (Rotation); Statistikdaten ohne automatische Löschung.</li>
+              <li><strong>Hinweis:</strong> Telefonnummern werden gehasht oder maskiert; sensible Schlüssel werden gefiltert.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Gelöschte Nutzer:innen</strong></summary>
+            <ul>
+              <li><strong>Zweck:</strong> Nachweispflichten und Reaktivierung.</li>
+              <li><strong>Speicherdauer:</strong> Einträge in <code>deleted_users.jsonl</code> bleiben dauerhaft.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Temporäre Mediendateien</strong></summary>
+            <ul>
+              <li><strong>Zweck:</strong> Transkription bzw. Analyse von Audio und Bildern.</li>
+              <li><strong>Speicherdauer:</strong> nur kurzfristig im Temp-Verzeichnis, danach gelöscht.</li>
+            </ul>
+          </details>
+        </section>
 
       <!-- Datenfluss -->
       <section aria-labelledby="fluss">
@@ -152,31 +202,32 @@
 
       <!-- Hosting & Weitergabe -->
       <section aria-labelledby="weitergabe">
-        <h2 id="weitergabe"><span class="num" aria-hidden="true">5</span> Hosting & Weitergabe</h2>
-        <ul>
-          <li><strong>Hosting:</strong> Verarbeitung in der <strong>Schweiz</strong>.</li>
-          <li><strong>Weitergabe:</strong> keine Weitergabe personenbezogener Daten an Dritte, ausser:
-            <ul>
-              <li>an WhatsApp/Meta für die reine Nachrichtenübertragung (technisch erforderlich),</li>
-              <li>falls gesetzlich vorgeschrieben.</li>
-            </ul>
-          </li>
-          <li><strong>Websuche (Opt-in):</strong> Anfrage über Serper-API ohne Nutzeridentifikatoren (nur die Suchfrage).</li>
-        </ul>
-      </section>
+          <h2 id="weitergabe"><span class="num" aria-hidden="true">5</span> Hosting & Weitergabe</h2>
+          <ul>
+            <li><strong>Hosting:</strong> Verarbeitung in der <strong>Schweiz</strong>.</li>
+            <li><strong>Weitergabe:</strong> keine Weitergabe personenbezogener Daten an Dritte, ausser:
+              <ul>
+                <li>an WhatsApp/Meta für die reine Nachrichtenübertragung (technisch erforderlich),</li>
+                <li>an KI- und Sprachdienste wie AlpineAI/OpenAI zur Beantwortung deiner Anfragen,</li>
+                <li>falls gesetzlich vorgeschrieben.</li>
+              </ul>
+            </li>
+            <li><strong>Websuche (Opt-in):</strong> Anfrage über einen externen Suchdienst (z. B. Serper/Brave) ohne Nutzeridentifikatoren.</li>
+          </ul>
+        </section>
 
       <!-- Sicherheit -->
-      <section aria-labelledby="sicherheit">
-        <h2 id="sicherheit"><span class="num" aria-hidden="true">6</span> Sicherheit & Speicherfristen</h2>
-        <div class="grid">
-          <div class="kachel">
-            <p><strong>Sicherheit:</strong><br>Transportverschlüsselung, Zugriffskontrollen, verschlüsselte Speicherung deiner Einstellungen, maskierte Telefonnummern in Logs.</p>
+        <section aria-labelledby="sicherheit">
+          <h2 id="sicherheit"><span class="num" aria-hidden="true">6</span> Sicherheit & Speicherdauer</h2>
+          <div class="grid">
+            <div class="kachel">
+              <p><strong>Sicherheit:</strong><br>Nutzerdaten werden mit Fernet in Redis verschlüsselt; Telefonnummern sind via SHA‑256 + „Pepper“ gehasht. Eingehende Webhooks prüfen wir per HMAC‑SHA256.</p>
+            </div>
+            <div class="kachel">
+              <p><strong>Speicherdauer:</strong><br>Chat-Verlauf 10 Minuten, Rate-Limiting wenige Sekunden, Logs ca. 14 Tage, globale Nachrichten 8 Wochen, Statistikdaten ohne automatische Löschung, Einträge gelöschter Nutzer dauerhaft, temporäre Medien sofort nach Verarbeitung gelöscht.</p>
+            </div>
           </div>
-          <div class="kachel">
-            <p><strong>Speicherfristen:</strong><br>Audio <em>sofort nach Verarbeitung</em> gelöscht; Chat-Kontext <em>max. 10 Minuten (RAM-only)</em>; Logs nur ohne Inhalte und nur so lange wie für Betrieb/Fehleranalyse nötig.</p>
-          </div>
-        </div>
-      </section>
+        </section>
 
       <!-- Deine Rechte -->
       <section aria-labelledby="rechte">
@@ -200,9 +251,10 @@
       </section>
     </main>
 
-    <footer class="footer" role="contentinfo">
-      <p>© <span id="year"></span> SwissChat Assistant – Sicher, transparent, schweizerisch</p>
-    </footer>
+      <footer class="footer" role="contentinfo">
+        <p>© <span id="year"></span> SwissChat Assistant – Sicher, transparent, schweizerisch</p>
+        <p><a href="impressum.html">Impressum</a> • <a href="agb.html">AGB</a></p>
+      </footer>
   </div>
   <script data-goatcounter="https://swisschat.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
