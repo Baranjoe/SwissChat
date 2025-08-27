@@ -78,14 +78,14 @@
         <h2 id="kurz"><span class="num" aria-hidden="true">1</span> In Kürze (TL;DR)</h2>
         <div class="grid">
           <div class="kachel">
-            <p><strong>Was wir tun:</strong><br>Wir verarbeiten deine WhatsApp-Nachrichten (Text/Audio/Bilder), um dir Antworten zu geben. Sprach- und Bilddaten werden von einem LLM transkribiert bzw. analysiert und danach gelöscht. Der Chat-Kontext wird nur <strong>max. 10 Minuten</strong> im RAM gehalten, damit das LLM sinnvoll antworten kann.</p>
+            <p><strong>Was ich tue:</strong><br>Ich verarbeite deine WhatsApp-Nachrichten (Text/Audio/Bilder) und lasse sie durch ein LLM beantworten. Sprach- und Bilddaten werden vom LLM transkribiert bzw. analysiert und danach gelöscht. Der Chat-Kontext bleibt nur <strong>max. 10 Minuten</strong> im RAM, damit das LLM sinnvoll antworten kann.</p>
           </div>
           <div class="kachel">
-            <p><strong>Was wir nicht tun:</strong><br>Keine dauerhafte Speicherung von Nachrichteninhalten, kein Verkauf von Daten, keine Weitergabe an Werbenetzwerke, keine Profilbildung.</p>
+            <p><strong>Was ich nicht tue:</strong><br>Keine dauerhafte Speicherung von Nachrichteninhalten, kein Verkauf von Daten, keine Weitergabe an Werbenetzwerke, keine Profilbildung.</p>
           </div>
         </div>
         <div class="highlight">
-          <p><span class="badge">Optional</span> Wenn du die Websuche aktivierst, stellen wir bei Bedarf über die <strong>Brave Search API und/oder Serper</strong> nur eine <em>Sachfrage</em> (z. B. „Wie ist das Wetter morgen in Zürich?“). <strong>Es werden keine Nutzeridentifikatoren</strong> wie Telefonnummer oder Name mitgeschickt.</p>
+          <p><span class="badge">Optional</span> Wenn du die Websuche aktivierst, stelle ich bei Bedarf über die <strong>Brave Search API und/oder Serper</strong> nur eine <em>Sachfrage</em> (z. B. „Wie ist das Wetter morgen in Zürich?“). <strong>Es werden keine Nutzeridentifikatoren</strong> wie Telefonnummer oder Name mitgeschickt.</p>
         </div>
       </section>
 
@@ -94,14 +94,14 @@
         <h2 id="verantw"><span class="num" aria-hidden="true">2</span> Verantwortliche Stelle</h2>
         <div class="block" itemscope itemtype="https://schema.org/Organization">
           <p><strong itemprop="name">SwissChat Assistant</strong><br>
-          <span itemprop="founder">Joel Barandun</span><br>
+          <span itemprop="founder">Joël Barandun</span><br>
           E-Mail: <a href="mailto:swisschat@icloud.com" itemprop="email">swisschat@icloud.com</a></p>
         </div>
       </section>
 
       <!-- Welche Daten, Zweck, Dauer -->
       <section aria-labelledby="daten">
-        <h2 id="daten"><span class="num" aria-hidden="true">3</span> Welche Daten wir verarbeiten und warum</h2>
+      <h2 id="daten"><span class="num" aria-hidden="true">3</span> Welche Daten ich verarbeite und warum</h2>
 
         <details open>
           <summary><strong>Nachrichteninhalte (Text, Audio & Bilder)</strong></summary>
@@ -195,9 +195,9 @@
       <section aria-labelledby="fluss">
         <h2 id="fluss"><span class="num" aria-hidden="true">4</span> So läuft die Verarbeitung ab</h2>
         <ol>
-          <li><strong>WhatsApp → SwissChat:</strong> Deine Nachricht kommt via WhatsApp/Meta technisch bedingt bei uns an.</li>
-          <li><strong>SwissChat verarbeitet:</strong> Text wird direkt beantwortet; Audio und Bilder werden kurz durch ein LLM transkribiert bzw. analysiert. Medien werden danach gelöscht; Chat-Kontext bleibt max. 10 Min. im RAM.</li>
-          <li><strong>Antwort an dich:</strong> Wir schicken die Antwort über WhatsApp zurück. (Optional: Bei aktivierter Websuche stellen wir eine generische Frage über die Brave Search API oder Serper – ohne Nutzerinfos.)</li>
+          <li><strong>WhatsApp → SwissChat:</strong> Deine Nachricht kommt via WhatsApp/Meta technisch bedingt bei mir an.</li>
+          <li><strong>SwissChat verarbeitet:</strong> Text wird direkt durch ein LLM beantwortet; Audio und Bilder werden kurz vom LLM transkribiert bzw. analysiert. Medien werden danach gelöscht; Chat-Kontext bleibt max. 10 Min. im RAM.</li>
+          <li><strong>Antwort an dich:</strong> Ich schicke die Antwort über WhatsApp zurück. (Optional: Bei aktivierter Websuche stelle ich eine generische Frage über die Brave Search API oder Serper – ohne Nutzerinfos.)</li>
         </ol>
       </section>
 
@@ -222,7 +222,7 @@
           <h2 id="sicherheit"><span class="num" aria-hidden="true">6</span> Sicherheit & Speicherdauer</h2>
           <div class="grid">
             <div class="kachel">
-              <p><strong>Sicherheit:</strong><br>Nutzerdaten werden mit Fernet in Redis verschlüsselt; Telefonnummern sind via SHA‑256 + „Pepper“ gehasht. Eingehende Webhooks prüfen wir per HMAC‑SHA256.</p>
+              <p><strong>Sicherheit:</strong><br>Nutzerdaten werden mit Fernet in Redis verschlüsselt; Telefonnummern sind via SHA‑256 + „Pepper“ gehasht. Eingehende Webhooks prüfe ich per HMAC‑SHA256.</p>
             </div>
             <div class="kachel">
               <p><strong>Speicherdauer:</strong><br>Chat-Verlauf 10 Minuten, Rate-Limiting wenige Sekunden, Logs ca. 14 Tage, globale Nachrichten 8 Wochen, Statistikdaten ohne automatische Löschung, Einträge gelöschter Nutzer dauerhaft, temporäre Medien sofort nach Verarbeitung gelöscht.</p>
@@ -235,19 +235,19 @@
         <h2 id="rechte"><span class="num" aria-hidden="true">7</span> Deine Rechte</h2>
         <p>Du hast je nach anwendbarem Recht (z. B. CH-DSG, ggf. EU-DSGVO) insbesondere folgende Rechte:</p>
         <ul>
-          <li>Auskunft über die von uns verarbeiteten Daten,</li>
+          <li>Auskunft über die von mir verarbeiteten Daten,</li>
           <li>Berichtigung unrichtiger Daten,</li>
           <li>Löschung bzw. Einschränkung der Verarbeitung,</li>
           <li>Datenübertragbarkeit (sofern anwendbar),</li>
           <li>Widerspruch gegen die Verarbeitung aus besonderen Gründen.</li>
         </ul>
-        <p>Schreibe uns jederzeit an <a href="mailto:swisschat@icloud.com">swisschat@icloud.com</a>. Wir bearbeiten dein Anliegen zeitnah.</p>
+        <p>Schreib mir jederzeit an <a href="mailto:swisschat@icloud.com">swisschat@icloud.com</a>. Ich bearbeite dein Anliegen zeitnah.</p>
       </section>
 
       <!-- Änderungen -->
       <section aria-labelledby="aenderungen">
         <h2 id="aenderungen"><span class="num" aria-hidden="true">8</span> Änderungen dieser Erklärung</h2>
-        <p>Wir können diese Datenschutzerklärung bei Bedarf aktualisieren. Die jeweils aktuelle Version findest du immer auf dieser Seite.</p>
+        <p>Ich kann diese Datenschutzerklärung bei Bedarf aktualisieren. Die jeweils aktuelle Version findest du immer auf dieser Seite.</p>
         <div class="block"><strong>Stand:</strong> August 2025</div>
       </section>
     </main>
