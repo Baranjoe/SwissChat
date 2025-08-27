@@ -78,14 +78,14 @@
         <h2 id="kurz"><span class="num" aria-hidden="true">1</span> In Kürze (TL;DR)</h2>
         <div class="grid">
           <div class="kachel">
-            <p><strong>Was wir tun:</strong><br>Wir verarbeiten deine WhatsApp-Nachrichten (Text/Audio), um dir Antworten zu geben. Sprachdaten werden von einem LLM transkribiert/verarbeitet und danach gelöscht. Der Chat-Kontext wird nur <strong>max. 10 Minuten</strong> im RAM gehalten, damit das LLM sinnvoll antworten kann.</p>
+            <p><strong>Was wir tun:</strong><br>Wir verarbeiten deine WhatsApp-Nachrichten (Text/Audio/Bilder), um dir Antworten zu geben. Sprach- und Bilddaten werden von einem LLM transkribiert bzw. analysiert und danach gelöscht. Der Chat-Kontext wird nur <strong>max. 10 Minuten</strong> im RAM gehalten, damit das LLM sinnvoll antworten kann.</p>
           </div>
           <div class="kachel">
             <p><strong>Was wir nicht tun:</strong><br>Keine dauerhafte Speicherung von Nachrichteninhalten, kein Verkauf von Daten, keine Weitergabe an Werbenetzwerke, keine Profilbildung.</p>
           </div>
         </div>
         <div class="highlight">
-          <p><span class="badge">Optional</span> Wenn du die Websuche aktivierst, stellen wir bei Bedarf über die <strong>Serper-API</strong> nur eine <em>Sachfrage</em> (z. B. „Wie ist das Wetter morgen in Zürich?“). <strong>Es werden keine Nutzeridentifikatoren</strong> wie Telefonnummer oder Name mitgeschickt.</p>
+          <p><span class="badge">Optional</span> Wenn du die Websuche aktivierst, stellen wir bei Bedarf über die <strong>Brave Search API und/oder Serper</strong> nur eine <em>Sachfrage</em> (z. B. „Wie ist das Wetter morgen in Zürich?“). <strong>Es werden keine Nutzeridentifikatoren</strong> wie Telefonnummer oder Name mitgeschickt.</p>
         </div>
       </section>
 
@@ -104,11 +104,11 @@
         <h2 id="daten"><span class="num" aria-hidden="true">3</span> Welche Daten wir verarbeiten und warum</h2>
 
         <details open>
-          <summary><strong>Nachrichteninhalte (Text & Audio)</strong></summary>
+          <summary><strong>Nachrichteninhalte (Text, Audio & Bilder)</strong></summary>
           <ul>
-            <li><strong>Zweck:</strong> Antworten erstellen; bei Audio Transkription (inkl. Dialekt) via LLM.</li>
-            <li><strong>Speicherdauer:</strong> <em>Chat-Kontext max. 10 Minuten (RAM-only)</em>; Audioclips nach der Verarbeitung gelöscht.</li>
-            <li><strong>Hinweis LLM:</strong> Sprachdaten werden nur zur Transkription/Antwort genutzt und im Anschluss verworfen.</li>
+            <li><strong>Zweck:</strong> Antworten erstellen; Audio und Bilder werden via LLM transkribiert bzw. analysiert.</li>
+            <li><strong>Speicherdauer:</strong> <em>Chat-Kontext max. 10 Minuten (RAM-only)</em>; Audio- und Bilddateien nach der Verarbeitung gelöscht.</li>
+            <li><strong>Hinweis LLM:</strong> Sprach- und Bilddaten werden nur zur Transkription bzw. Analyse/Antwort genutzt und im Anschluss verworfen.</li>
           </ul>
         </details>
 
@@ -177,7 +177,8 @@
             <summary><strong>Gelöschte Nutzer:innen</strong></summary>
             <ul>
               <li><strong>Zweck:</strong> Nachweispflichten und Reaktivierung.</li>
-              <li><strong>Speicherdauer:</strong> Einträge in <code>deleted_users.jsonl</code> bleiben dauerhaft.</li>
+              <li><strong>Gespeichert:</strong> Blockierungsstatus und Nutzungsstatistiken unter verschlüsselter Nummer.</li>
+              <li><strong>Speicherdauer:</strong> dauerhaft.</li>
             </ul>
           </details>
 
@@ -185,7 +186,7 @@
             <summary><strong>Temporäre Mediendateien</strong></summary>
             <ul>
               <li><strong>Zweck:</strong> Transkription bzw. Analyse von Audio und Bildern.</li>
-              <li><strong>Speicherdauer:</strong> nur kurzfristig im Temp-Verzeichnis, danach gelöscht.</li>
+              <li><strong>Speicherdauer:</strong> nur kurzfristig gespeichert, danach gelöscht.</li>
             </ul>
           </details>
         </section>
@@ -195,8 +196,8 @@
         <h2 id="fluss"><span class="num" aria-hidden="true">4</span> So läuft die Verarbeitung ab</h2>
         <ol>
           <li><strong>WhatsApp → SwissChat:</strong> Deine Nachricht kommt via WhatsApp/Meta technisch bedingt bei uns an.</li>
-          <li><strong>SwissChat verarbeitet:</strong> Text wird direkt beantwortet; Audio wird kurz durch ein LLM transkribiert/analysiert. Audio wird danach gelöscht; Chat-Kontext bleibt max. 10 Min. im RAM.</li>
-          <li><strong>Antwort an dich:</strong> Wir schicken die Antwort über WhatsApp zurück. (Optional: Bei aktivierter Websuche stellen wir eine generische Frage über die Serper-API – ohne Nutzerinfos.)</li>
+          <li><strong>SwissChat verarbeitet:</strong> Text wird direkt beantwortet; Audio und Bilder werden kurz durch ein LLM transkribiert bzw. analysiert. Medien werden danach gelöscht; Chat-Kontext bleibt max. 10 Min. im RAM.</li>
+          <li><strong>Antwort an dich:</strong> Wir schicken die Antwort über WhatsApp zurück. (Optional: Bei aktivierter Websuche stellen wir eine generische Frage über die Brave Search API oder Serper – ohne Nutzerinfos.)</li>
         </ol>
       </section>
 
@@ -208,11 +209,11 @@
             <li><strong>Weitergabe:</strong> keine Weitergabe personenbezogener Daten an Dritte, ausser:
               <ul>
                 <li>an WhatsApp/Meta für die reine Nachrichtenübertragung (technisch erforderlich),</li>
-                <li>an KI- und Sprachdienste wie AlpineAI/OpenAI zur Beantwortung deiner Anfragen,</li>
+                <li>an KI- und Sprachdienste wie AlpineAI zur Beantwortung deiner Anfragen,</li>
                 <li>falls gesetzlich vorgeschrieben.</li>
               </ul>
             </li>
-            <li><strong>Websuche (Opt-in):</strong> Anfrage über einen externen Suchdienst (z. B. Serper/Brave) ohne Nutzeridentifikatoren.</li>
+            <li><strong>Websuche (Opt-in):</strong> Anfrage über einen externen Suchdienst (z. B. Brave Search API und/oder Serper) ohne Nutzeridentifikatoren.</li>
           </ul>
         </section>
 
