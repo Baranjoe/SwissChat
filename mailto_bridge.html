@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Email us</title>
+<style>
+  body {display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;margin:0;}
+  a.button {background:#25D366;color:white;padding:1rem 2rem;text-decoration:none;font-size:1.2rem;border-radius:8px;}
+</style>
+</head>
+<body>
+<a id="email" class="button" href="#">Email us</a>
+<p id="copied" style="display:none">Link copied to clipboard</p>
+<script>
+  const params = new URLSearchParams(location.search);
+  const mailto = params.get('to');
+  const link = document.getElementById('email');
+  const copied = document.getElementById('copied');
+  if (mailto) {
+    link.href = mailto;
+    link.addEventListener('click', () => {
+      navigator.clipboard.writeText(mailto).then(() => {
+        copied.style.display = 'block';
+      });
+    });
+  } else {
+    link.textContent = 'No email provided';
+    link.style.pointerEvents = 'none';
+  }
+</script>
+</body>
+</html>
