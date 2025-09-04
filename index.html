@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SwissChat</title>
-  <meta name="description" content="Dein WhatsApp KI-Assistent, gehostet in der Schweiz. Transkribiert Sprachnachrichten auch in Dialekt!" />
+  <meta name="description" content="Dein WhatsApp KI-Assistent, gehostet in der Schweiz. Sprachnachrichten transkribieren, E-Mails schreiben, PDFs zusammenfassen und mehr!" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
@@ -35,7 +35,7 @@
     }
     
     .container { 
-      max-width: 800px; 
+      max-width: 900px; 
       margin: 0 auto; 
       padding: 2rem 1.5rem;
       min-height: 100vh;
@@ -116,9 +116,15 @@
       margin-bottom: 3rem;
     }
     
-    @media (min-width: 640px) {
+    @media (min-width: 768px) {
       .features {
         grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .features {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
     
@@ -161,6 +167,7 @@
     .feature-desc {
       color: var(--muted);
       line-height: 1.6;
+      font-size: 0.95rem;
     }
     
     .highlight {
@@ -245,7 +252,7 @@
       </div>
       
       <h1>SwissChat</h1>
-      <p class="subtitle">Dein WhatsApp KI-Assistent, gehostet in der Schweiz</p>
+      <p class="subtitle">Dein WhatsApp KI-Assistent mit Spracherkennung, E-Mail-Support & mehr</p>
       
       <a class="cta-button" href="https://wa.me/41794067078?text=JETZT%20ABSENDEN%20%F0%9F%91%89%20Hey%20SwissChat%2C%20ich%20m%C3%B6chte%20dich%20als%20smarten%20Assistenten%20f%C3%BCr%20Chat%2C%20Sprachnachrichten%20%26%20mehr%20nutzen%20%F0%9F%9A%80%0ASEND%20NOW%20%F0%9F%91%89%20Hey%20SwissChat%2C%20I%20want%20to%20use%20you%20as%20my%20smart%20assistant%20for%20chat%2C%20voice%20messages%20%26%20more%20%F0%9F%9A%80" target="_blank" rel="noopener">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -257,59 +264,80 @@
 
     <div class="highlight">
       <h2>🎤 Sprachnachrichten in Text</h2>
-      <p>Transkribiert Sprachnachrichten automatisch – <strong>auch Schweizerdeutsch und andere Dialekte!</strong> Perfekt wenn du gerade nicht abhören kannst.</p>
+      <p>Transkribiert Sprachnachrichten automatisch – <strong>auch Schweizerdeutsch und andere Dialekte!</strong> Bis zu 10 Minuten lang. Perfekt wenn du gerade nicht abhören kannst.</p>
     </div>
 
-      <div class="features">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2a1 1 0 0 1 2 0v2a5 5 0 0 0 10 0v-2a1 1 0 0 1 2 0z"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Sprachnachrichten</h3>
-          <p class="feature-desc">Leite mir Sprachnachrichten weiter – ich sende dir Zusammenfassung und Transkript.</p>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2a1 1 0 0 1 2 0v2a5 5 0 0 0 10 0v-2a1 1 0 0 1 2 0z"/>
+          </svg>
         </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M10 2a8 8 0 105.292 14.292l3.7 3.7a1 1 0 001.415-1.415l-3.7-3.7A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Fragen stellen</h3>
-          <p class="feature-desc">Schick mir direkt eine Sprachnachricht oder einen Chat mit deiner Frage – ich recherchiere auch im Web.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14l4-4h12a2 2 0 0 0 2-2z"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Bilder verstehen</h3>
-          <p class="feature-desc">Schick ein Foto und erhalte Antworten oder Übersetzungen.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M5 4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v16l-7-3-7 3V4z"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Diktieren</h3>
-          <p class="feature-desc">Sag, was ich schreiben soll – Modus „dic“ oder „edi“ hilft dir dabei.</p>
-        </div>
+        <h3 class="feature-title">Sprachnachrichten</h3>
+        <p class="feature-desc">Leite mir Sprachnachrichten weiter – ich sende dir Zusammenfassung und Transkript. Funktioniert auch auf Schweizerdeutsch!</p>
       </div>
 
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">E-Mails schreiben</h3>
+        <p class="feature-desc">Sag mir ein paar Stichpunkte – die E-Mail öffnet sich direkt in deiner Mail-App. Perfekt auch für Antworten auf bestehende E-Mails.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10 2a8 8 0 105.292 14.292l3.7 3.7a1 1 0 001.415-1.415l-3.7-3.7A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Websuche & Fragen</h3>
+        <p class="feature-desc">Stelle Fragen per Chat oder Sprachnachricht. Ich recherchiere aktuelle Infos im Web – Wetter, Konzerte, Rezepte und mehr.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14l4-4h12a2 2 0 0 0 2-2z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Bilder analysieren</h3>
+        <p class="feature-desc">Schick ein Foto und stelle Fragen dazu – Produktsuche, Übersetzungen von Speisekarten oder Analyse von Dokumenten.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">PDFs zusammenfassen</h3>
+        <p class="feature-desc">Schick mir einfache PDF-Dokumente bis 10 Seiten. Ich fasse sie zusammen oder beantworte Fragen zum Inhalt.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2a1 1 0 0 1 2 0v2a5 5 0 0 0 10 0v-2a1 1 0 0 1 2 0z"/>
+            <circle cx="12" cy="20" r="2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Diktieren</h3>
+        <p class="feature-desc">Sag einfach, was ich schreiben soll – ich formuliere es fertig für dich. Verwende den speziellen Diktiermodus für beste Ergebnisse.</p>
+      </div>
+    </div>
+
     <div class="highlight">
-  <h2>🤖 Dein persönlicher KI-Assistent</h2>
-  <p>Stelle Fragen per Chat oder Sprachnachricht, um direkt Antworten zu erhalten.
-  Mit integrierter <strong>Websuche</strong> für schnelle Recherchen – alles basierend auf der innovativen <strong>KI-Technologie von AlpineAI</strong>.</p>
-</div>
+      <h2>🤖 Dein persönlicher KI-Assistent</h2>
+      <p>Stelle Fragen per Chat oder Sprachnachricht, um direkte Antworten zu erhalten. Mit integrierter <strong>Websuche</strong> für aktuelle Informationen – basierend auf innovativer <strong>AlpineAI-Technologie</strong>, gehostet in der Schweiz.</p>
+    </div>
 
     <div class="privacy-note">
-      <p style="padding-bottom: 10px"><strong>Multilingual:</strong> Funktioniert in einer Vielzahl von Sprachen, optimiert für Deutsch, Englisch, Französisch und Italienisch – wurde sogar auf Romanisch getestet ;)</p>
+      <p style="padding-bottom: 15px"><strong>Multilingual & Swiss-optimiert:</strong> Funktioniert in einer Vielzahl von Sprachen, optimiert für Deutsch, Englisch, Französisch und Italienisch – wurde sogar auf Romanisch getestet! Schreib einfach «Einstellungen» für weitere Optionen oder «Referral» um Freunde einzuladen.</p>
       <div class="languages">
         <div>🇩🇪 "Hallo" - Sofort loslegen</div>
         <div>🇬🇧 "Hello" - Start chatting</div>
@@ -318,10 +346,10 @@
       </div>
     </div>
 
-      <div class="footer">
-        <p>© <span id="year"></span> SwissChat</p>
-        <p>Kontakt: <a href="mailto:swisschat@icloud.com">swisschat@icloud.com</a> • <a href="datenschutz.html">Datenschutz</a> • <a href="agb.html">AGB</a> • <a href="impressum.html">Impressum</a></p>
-      </div>
+    <div class="footer">
+      <p>© <span id="year"></span> SwissChat</p>
+      <p>Kontakt: <a href="mailto:swisschat@icloud.com">swisschat@icloud.com</a> • <a href="datenschutz.html">Datenschutz</a> • <a href="agb.html">AGB</a> • <a href="impressum.html">Impressum</a></p>
+    </div>
   </div>
 
   <script data-goatcounter="https://swisschat.goatcounter.com/count"
