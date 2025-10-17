@@ -172,6 +172,30 @@
       backdrop-filter: blur(10px);
       transition: all 0.3s ease;
     }
+
+    /* Special highlight for Sora tile */
+    .feature-card.sora-highlight {
+      background: linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
+      border-color: rgba(255,255,255,0.45);
+      box-shadow: 0 28px 72px -14px rgba(251, 191, 36, 0.5);
+      position: relative;
+    }
+    .feature-card.sora-highlight .feature-icon {
+      background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    }
+    .feature-card.sora-highlight .sora-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: linear-gradient(135deg, #f59e0b, #fbbf24);
+      color: #111827;
+      font-weight: 700;
+      font-size: 0.7rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      letter-spacing: .02em;
+      box-shadow: 0 8px 20px rgba(251, 191, 36, 0.35);
+    }
     
     .feature-card:hover {
       transform: translateY(-4px);
@@ -344,6 +368,18 @@
         <p class="feature-desc">Stelle Fragen per Chat oder Sprachnachricht. Ich recherchiere aktuelle Infos im Web – Wetter, Konzerte, Rezepte und mehr.</p>
       </div>
 
+      <!-- Sora tile moved to middle of second row and highlighted -->
+      <div class="feature-card sora-highlight">
+        <span class="sora-badge">✨ Highlight</span>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 6h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6zm4 2v6l6-3-6-3z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">KI‑Videos (Sora)</h3>
+        <p class="feature-desc">Erstelle kurze KI‑Videos aus Text‑Prompts oder Vorlagen mit Sora.</p>
+      </div>
+
       <div class="feature-card">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="currentColor">
@@ -367,16 +403,6 @@
       <div class="feature-card">
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M4 6h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6zm4 2v6l6-3-6-3z"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">KI‑Videos (Sora)</h3>
-        <p class="feature-desc">Erstelle kurze KI‑Videos aus Text‑Prompts oder Vorlagen mit Sora. Missbräuchliche Nutzung ist ausdrücklich untersagt.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
             <path d="M19 10v2a7 7 0 0 1-14 0v-2a1 1 0 0 1 2 0v2a5 5 0 0 0 10 0v-2a1 1 0 0 1 2 0z"/>
             <circle cx="12" cy="20" r="2"/>
@@ -394,13 +420,7 @@
 
     <div class="privacy-note">
       <p style="padding-bottom: 15px"><strong>Multilingual & Swiss-optimiert:</strong> Funktioniert in einer Vielzahl von Sprachen, optimiert für Deutsch, Englisch, Französisch und Italienisch – wurde sogar auf Romanisch getestet! Schreib einfach «Einstellungen» für weitere Optionen oder «Referral» um Freunde einzuladen.</p>
-      <p><strong>Hinweis zu Medien & KI:</strong> Sprachantworten (TTS) und die KI‑Videoerstellung via <strong>Sora</strong> erfolgen über die <strong>OpenAI API</strong>. Dafür werden die jeweiligen Inhalte/Prompts an OpenAI übermittelt. <a href="datenschutz.html">Details im Datenschutz</a>. <strong>Missbräuchlicher Einsatz von Sora ist untersagt</strong> (<a href="agb.html">AGB</a>).</p>
-      <div class="languages">
-        <div>🇩🇪 "Hallo" - Sofort loslegen</div>
-        <div>🇬🇧 "Hello" - Start chatting</div>
-        <div>🇫🇷 "Bonjour" - Commencer</div>
-        <div>🇮🇹 "Ciao" - Inizia subito</div>
-      </div>
+      
     </div>
 
     <div class="footer">
