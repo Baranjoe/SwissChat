@@ -78,13 +78,14 @@
         <h2 id="kurz"><span class="num" aria-hidden="true">1</span> In Kürze (TL;DR)</h2>
         <div class="grid">
           <div class="kachel">
-            <p><strong>Was ich tue:</strong><br>Ich verarbeite deine WhatsApp-Nachrichten (Text/Audio/Bilder) und lasse sie durch ein LLM beantworten. Sprach- und Bilddaten werden vom LLM transkribiert bzw. analysiert und danach gelöscht. Der Chat-Kontext bleibt nur <strong>max. 10 Minuten</strong> im RAM, damit das LLM sinnvoll antworten kann.</p>
+            <p><strong>Was ich tue:</strong><br>Ich verarbeite deine WhatsApp-Nachrichten (Text/Audio/Bilder) und lasse sie durch ein LLM beantworten. Sprach- und Bilddaten werden vom LLM transkribiert bzw. analysiert und danach gelöscht. Auf Wunsch antworte ich als <strong>Sprachnachricht</strong>. Zusätzlich kannst du <strong>KI‑Videos (Sora)</strong> generieren. Der Chat-Kontext bleibt nur <strong>max. 10 Minuten</strong> im RAM, damit das LLM sinnvoll antworten kann.</p>
           </div>
           <div class="kachel">
             <p><strong>Was ich nicht tue:</strong><br>Keine dauerhafte Speicherung von Nachrichteninhalten, kein Verkauf von Daten, keine Weitergabe an Werbenetzwerke, keine Profilbildung.</p>
           </div>
         </div>
         <div class="highlight">
+          <p><span class="badge">OpenAI API</span> Transkription von Audio, Sprachantworten (Text‑to‑Speech) sowie die <strong>Videoerstellung via Sora</strong> erfolgen über die <strong>OpenAI API</strong>. Dafür werden die jeweiligen Inhalte/Prompts und nötigen Mediendateien an OpenAI übertragen.</p>
           <p><span class="badge">Optional</span> Wenn du die Websuche aktivierst, stelle ich bei Bedarf über die <strong>Brave Search API und/oder Serper</strong> nur eine <em>Sachfrage</em> (z. B. „Wie ist das Wetter morgen in Zürich?“). <strong>Es werden keine Nutzeridentifikatoren</strong> wie Telefonnummer oder Name mitgeschickt.</p>
         </div>
       </section>
@@ -109,6 +110,25 @@
             <li><strong>Zweck:</strong> Antworten erstellen; Audio und Bilder werden via LLM transkribiert bzw. analysiert.</li>
             <li><strong>Speicherdauer:</strong> <em>Chat-Kontext max. 10 Minuten (RAM-only)</em>; Audio- und Bilddateien nach der Verarbeitung gelöscht.</li>
             <li><strong>Hinweis LLM:</strong> Sprach- und Bilddaten werden nur zur Transkription bzw. Analyse/Antwort genutzt und im Anschluss verworfen.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary><strong>Sprachantworten (Text‑to‑Speech)</strong></summary>
+          <ul>
+            <li><strong>Zweck:</strong> Auf Wunsch werden Antworten als Audio erzeugt und per WhatsApp zugestellt.</li>
+            <li><strong>Inhalt:</strong> Der Antworttext und ggf. kurze Metadaten werden zur Sprachsynthese an die <strong>OpenAI API</strong> gesendet; es werden keine Nutzerkennungen mitgeschickt.</li>
+            <li><strong>Speicherdauer:</strong> Das erzeugte Audio wird nur zum Versand zwischengespeichert und danach gelöscht.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary><strong>KI‑Videoerstellung (Sora)</strong></summary>
+          <ul>
+            <li><strong>Zweck:</strong> Generierung kurzer KI‑Videos basierend auf deinem Prompt/Vorlagen.</li>
+            <li><strong>Inhalt:</strong> Dein Prompt und ggf. erforderliche Referenzmedien werden an die <strong>OpenAI Sora API</strong> übertragen. Das generierte Video wird zum Versand/Download bereitgestellt.</li>
+            <li><strong>Speicherdauer:</strong> Input‑Medien nur kurzfristig für die Verarbeitung; erzeugte Videos werden nach Auslieferung aus den temporären Speichern gelöscht.</li>
+            <li><strong>Hinweis Sora:</strong> <strong>Missbräuchliche Nutzung ist untersagt</strong> (siehe AGB). Du bist verantwortlich für Rechte an eingespeisten Inhalten.</li>
           </ul>
         </details>
 
@@ -185,8 +205,8 @@
           <details>
             <summary><strong>Temporäre Mediendateien</strong></summary>
             <ul>
-              <li><strong>Zweck:</strong> Transkription bzw. Analyse von Audio und Bildern.</li>
-              <li><strong>Speicherdauer:</strong> nur kurzfristig gespeichert, danach gelöscht.</li>
+              <li><strong>Zweck:</strong> Transkription/Analyse von <em>Audio/Bildern</em>, Sprachsynthese‑Ausgabe (Audio) sowie Bereitstellung erzeugter <em>Videos</em> (Sora) zur Auslieferung.</li>
+              <li><strong>Speicherdauer:</strong> nur kurzfristig bis zur Verarbeitung/Auslieferung, danach gelöscht.</li>
             </ul>
           </details>
         </section>
@@ -196,8 +216,8 @@
         <h2 id="fluss"><span class="num" aria-hidden="true">4</span> So läuft die Verarbeitung ab</h2>
         <ol>
           <li><strong>WhatsApp → SwissChat:</strong> Deine Nachricht kommt via WhatsApp/Meta technisch bedingt bei mir an.</li>
-          <li><strong>SwissChat verarbeitet:</strong> Text wird direkt durch ein LLM beantwortet; Audio und Bilder werden kurz vom LLM transkribiert bzw. analysiert. Medien werden danach gelöscht; Chat-Kontext bleibt max. 10 Min. im RAM.</li>
-          <li><strong>Antwort an dich:</strong> Ich schicke die Antwort über WhatsApp zurück. (Optional: Bei aktivierter Websuche stelle ich eine generische Frage über die Brave Search API oder Serper – ohne Nutzerinfos.)</li>
+          <li><strong>SwissChat verarbeitet:</strong> Text wird direkt durch ein LLM beantwortet; Audio und Bilder werden kurz transkribiert bzw. analysiert. Wenn <em>Sprachantworten</em> aktiv sind, wird der Antworttext zur Sprachsynthese an die <strong>OpenAI API</strong> gesendet. Für <em>Sora‑Videos</em> werden Prompt/Medien an die <strong>OpenAI Sora API</strong> übermittelt. Temporäre Medien werden danach gelöscht; Chat-Kontext bleibt max. 10 Min. im RAM.</li>
+          <li><strong>Antwort an dich:</strong> Ich schicke die Antwort (Text/Audio/Video) über WhatsApp zurück. (Optional: Bei aktivierter Websuche stelle ich eine generische Frage über die Brave Search API oder Serper – ohne Nutzerinfos.)</li>
         </ol>
       </section>
 
@@ -206,10 +226,10 @@
           <h2 id="weitergabe"><span class="num" aria-hidden="true">5</span> Hosting & Weitergabe</h2>
           <ul>
             <li><strong>Hosting:</strong> Verarbeitung in der <strong>Schweiz</strong>.</li>
-            <li><strong>Weitergabe:</strong> keine Weitergabe personenbezogener Daten an Dritte, ausser:
+            <li><strong>Weitergabe/Verarbeitung über Drittdienste:</strong>
               <ul>
                 <li>an WhatsApp/Meta für die reine Nachrichtenübertragung (technisch erforderlich),</li>
-                <li>an KI- und Sprachdienste zur Beantwortung deiner Anfragen,</li>
+                <li>an <strong>OpenAI (API)</strong> für Transkription von Audio, Sprachsynthese (Sprachantworten) und die <strong>Sora‑Videoerstellung</strong> – dafür werden die jeweiligen Inhalte/Prompts/Medien an OpenAI übertragen (Verarbeitung ausserhalb CH/EU, z. B. USA, möglich),</li>
                 <li>falls gesetzlich vorgeschrieben.</li>
               </ul>
             </li>
@@ -248,7 +268,7 @@
       <section aria-labelledby="aenderungen">
         <h2 id="aenderungen"><span class="num" aria-hidden="true">8</span> Änderungen dieser Erklärung</h2>
         <p>Ich kann diese Datenschutzerklärung bei Bedarf aktualisieren. Die jeweils aktuelle Version findest du immer auf dieser Seite.</p>
-        <div class="block"><strong>Stand:</strong> September 2025</div>
+        <div class="block"><strong>Stand:</strong> Oktober 2025</div>
       </section>
     </main>
 
